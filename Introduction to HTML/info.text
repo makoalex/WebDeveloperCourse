@@ -1,0 +1,43 @@
+HTML BASICS
+
+html stands for HYPERTEXT MARKUP LANGUAGE
+        the HYPER TEXT refers to he fact that HTML creates links that allow users to move fast from one page to the other
+        A MARKUP LANGUAGE allows to annotate text and there annotations provide additional meaning to the contents of the
+        document
+        the TAGS are the markup
+
+I. Structural Markup: the elements we use to describe headings and paragraphs
+II. Semantic Markup: provides extra information, such as where the emphasis is placed in a sentence,
+                                                          that something we wrote is a quotation
+1. DOCTYPE
+IN htmL <DOCTYPE HTML> is  required at the beginning of all documents in order to prevent the browser from switching into
+QUIRKS MODE when rendering the document
+
+2. HTML
+
+represents the root (top level) of an html document so it also referred to as the ROOT ELEMENT
+all other elements must be descendants of this ROOT ELEMENT
+THE OPENING HTML TAG <html>  and CLOSING TAG </HTML> indicates that everything that is in between the TAGS is HTML code
+
+3.<HEAD>
+contains machine readable information about the documents: title, scripts, style,sheets
+
+4. <Body>
+
+indicates that everything between the opening and closing tag is what will be displayed in the browser window
+
+        ADDING A COMMENT IN HTML:
+                                <!-- type comment here -->
+5. Title
+
+is found in the HEAD element
+is used by search engine algorithms to decide the order when listing pages in search results
+                a. defines a title in the browser tab bar
+                b. provides a title for the page when it is added to favourites
+                c. displays a titles for pages in search results
+
+HTML ELEMENTS:
+
+I. <h1> to <h6>
+represent 6 levels of section heading h1 being the biggest and h6 the smallest
+they are block level elements: eac gets its own line
