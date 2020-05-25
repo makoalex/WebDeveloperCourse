@@ -71,4 +71,24 @@ VII. <ul>
 unordered lists of elements with bullet points
 can also have nested lists of elements
 
+VIII. <div>
+ is a code block level  generic container that can be used to group elements together
+ it is used  for styling purposes using CLASS ID  ATTRIBUTES
+ so everything we write with div will push the next code on the next line
+
+IX. <span>
+it's the same as div just that is an in line  generic  container meaning it will not push the code on the next line
+
+ATTRIBUTES
+ are the wa we add addition information to our HTML ELEMENTS
+ they take the for of KEY VALUE PAIRS
+ the ones that are most used are SRC (stands for source) <img src = "link to the image" >
+ dn the A TAG or ANCHOR TAG
+              defines a HYPERLINK which is used to link from one page to another
+                the A TAG  is really important, is how we make links
+                        the most important part of the A TAG  is the HREF ATTRIBUTE- INDICATES THE LINKS DESTINATION
+                        SYNTAX:
+                                 <a href = " link">some text</a>
+                            we can also use an own html file  that we made and pass that into the url link :
+                            <a href = "name of  the file  >some text</a>"
 
