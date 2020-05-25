@@ -40,4 +40,35 @@ HTML ELEMENTS:
 
 I. <h1> to <h6>
 represent 6 levels of section heading h1 being the biggest and h6 the smallest
-they are block level elements: eac gets its own line
+they are block level elements: each gets its own line
+                    A BLOCK LEVEL ELEMENT always starts ata new line and takes the whole width available
+
+II. <p>
+are also block level elements
+are blocks of text separated from adjacent blocks by white lines, AND OR  the first line indentation
+
+III. <b> /<strong> AND <i>/<em>
+we can use <b> in order to make things BOLD or <i> to make them ITALIC, but using <strong> and <em> means something more
+than just using B or I.
+HTML5 imposed a separation between STYLE and STRUCTURE
+                by saying something is BOLD or ITALIC, it is a matter of style
+                by saying something is STRONG or EMPHASISED, is a matter of structure and what it means.
+                            it is a SEMANTIC MARKUP
+
+IV. <sub>
+elements that should be subscript. used with footnotes or chemical elements
+
+V. <sup>
+for characters that should be superscript, such as suffixes like dates or mathematical elements
+
+VI. <OL>
+is an ordered list of items typically rendered as a numbered list
+it doesn't mean anything on its own
+we need to proved list elements
+wwe can have nested lists inside the list elements
+
+VII. <ul>
+unordered lists of elements with bullet points
+can also have nested lists of elements
+
+
