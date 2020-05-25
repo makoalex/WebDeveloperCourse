@@ -1,0 +1,6 @@
+I. <table>
+ a TABLE TAG  defines an Html table
+        it consists of: <tr>- TABLE ROW
+                        <th>- TABLE HEADER
+                        <td>- table cell
+        a more complex table can also include <caption>,<col>, <colgroup>, <tfoot>, <thead>, and <tbody>
