@@ -4,3 +4,32 @@ I. <table>
                         <th>- TABLE HEADER
                         <td>- table cell
         a more complex table can also include <caption>,<col>, <colgroup>, <tfoot>, <thead>, and <tbody>
+
+<Forms>
+is how we get input from the user: shopping online, registering as a member, signing in
+
+FORM CONTROLS:
+there are several types of forms we can use to get info from our users:
+        1. ADDING TEXT : TEXT INPUT - single lin of text such as email address
+                         PASSWORD INPUT - single line text but masks the characters entered
+                         TEXT AREA MULTI LINE- FOR LONGER AREA OF TEXT such as comments
+        2. MAKING CHOICES: RADIO BUTTONS: select 1 of some options
+                           CHECKBOXES select or unselect options
+                           DROP- DOWN BOXES: user must pick one of many options from a list
+        3. SUBMITTING FORMS: SUBMIT BUTTONS: plain subscribe button for example
+                             IMAGE BUTTONS: similar to SUBMIT but allow you to use an IMAGE
+                             UPLOADING FILE:
+
+a FORM  may have serveral form controls each gathering different information.
+the SERVER TO WHICH THE DATA IS SENT NEEDS TO KNOW  WHICH PIECE OF IMPUTTED DATA CORRESPONDS WITH WHICH FORM ELEMENT
+that is why they are sent as KEY- VALUE PAIRS
+                USERNAME= ivy
+           FORM STRUCTURE:
+    FORM CONTROLS LIVE INSIDE <form> element
+                1. ACTION ATTRIBUTE which contains the URL OF THE SERVER THAT WILL RECEIVE THE FORM WHEN SUBMITTED
+                2. METHOD:
+                            a. get- usually used with search engines
+                                    the values from the form are added at the end of the URL
+                            b. Post
+                            c. ID
+                      
