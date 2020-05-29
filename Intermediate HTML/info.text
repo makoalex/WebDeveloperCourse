@@ -32,4 +32,19 @@ that is why they are sent as KEY- VALUE PAIRS
                                     the values from the form are added at the end of the URL
                             b. Post
                             c. ID
-                      
+
+<input> is the most important of the form element
+it decides what kind of data it is entered into the form:
+            uses the TYPE attribute : <type= 'text'>
+            uses the TYPE attribute : <type= 'dropbox'>
+            uses the TYPE attribute : <type= 'date'>
+            uses the TYPE attribute : <type= 'hidden'>
+            uses the TYPE attribute : <type= 'password'>
+
+                        <form action = "/sign-in-url" method = "post">
+                            <input type = 'text' placeholder = 'username'>
+                            <input type = "password">
+                            <button> Login</button>
+                         </form>
+we can add PLACEHOLDERS that will fill the form with the content the user needs to fill
+inputs can also exist independently, out of a FORM tag
