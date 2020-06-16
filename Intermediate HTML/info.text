@@ -54,6 +54,25 @@ inputs can also exist independently, out of a FORM tag
 III. <labels>
 made for screen readers ad users that might have problems seeing
 if we use the FOR ATTRIBUTE it must always be the same as the ID ATTRIBUTE in the input element
+        <label for = 'username'>Username:</label>
+            <input id = 'username' type = 'text'>
 
 we can also have VALIDATIONS  in html, that make sure the correct data is entered in the form
 we do that by adding REQUIRED  after the INPUT TYPE ATTRIBUTE
+
+SELECT TAG
+helps create drop downs
+it can also take an attribute and a name:
+    <select> name = 'mood'>
+    select takes OPTIONS which will create the dropdown
+    <option value ='happy> :)</option>
+            Value is what will appear in the query string
+RADIO BUTTONS
+
+for radio buttons the layout is the same, except for the addition of name and value, which will be used to confine
+the selection
+THE NAME IN THE RADIO BUTTONS HAS TO BE IDENTICAL
+        <label for  = 'dogs'>Dogs:</label>
+            <input id= 'dogs' type = 'radio' name = 'choice' value= 'dogs'>
+        <label for = 'cats'> Cats:</label>
+            <input id = cats type = 'radio' name = 'choice' value = 'cats'
