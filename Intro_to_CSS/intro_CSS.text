@@ -1,0 +1,24 @@
+Cascading style sheets
+the key to understanding how CSS works is to imagine that there is an invisible box around each HTML element
+CSS allows us to create rules that control the way that each individual box is presented
+
+THE GENERAL RULE:
+
+CSS works by associating rules to HTML elements
+these rules govern how the content of those elements should be displayed
+it contains 2 parts : A SELECTOR:- INDICATES TO WHICH ELEMENTS THE RULE APPLIES TO
+                                 - the same rule can apply to mutiple elements if you separate  them by commas
+                      A DECLARATION : PROPERTY:VALUE
+                                     - DECLARES HOW THE ELEMENTS NAMED IN THE SELECTOR SHOULD BE STYLED
+                                     - IT HAS 2 PARTS : A PROPERTY- indicates the aspects of the lement you want to change
+                                                                    font, colour, width, height
+                                                        A VALUE specifies the settings you want to use for the property
+
+
+
+        selector:{
+             property:value;
+             anotherProperty:value;
+        }
+
+we want to separate our <css > from HTML based on the idea of separate concersn
