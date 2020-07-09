@@ -1,0 +1,15 @@
+ h1{
+    font-family:Comic Sans MS, cursive,sans-serif
+ }
+ body{
+    background: pink
+ }
+  ul{
+    border:1px double white;
+    border-radius:18px;
+    height:60px;
+    width:30%;
+    background-color:rgba(25, 141, 188,.5)
+ }
+ .second{
+    text-decoration:line-through
