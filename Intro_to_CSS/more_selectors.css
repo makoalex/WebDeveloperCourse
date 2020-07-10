@@ -1,0 +1,27 @@
+/*the star*/
+*{
+    border:1px solid red;
+}
+
+/*descendant selector*/
+li a{
+    color:green;
+}
+ /*adjacent selectors*/
+h3+ul li {
+    background-color: pink;
+}
+
+/*attribute selectors*/
+
+a[href="https://developers.google.com/web/showcase/2015/adventuremachine"]{
+    background-color: yellow;
+}
+/*visited/ not visited*/
+
+a:link{
+    colour:green
+}
+a:visited{
+    color:blue;
+}
