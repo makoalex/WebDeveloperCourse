@@ -25,3 +25,7 @@ a:link{
 a:visited{
     color:blue;
 }
+/* select and style the first letter of an element*/
+li:first-letter{
+    color:green
+}
