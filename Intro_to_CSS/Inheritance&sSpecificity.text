@@ -1,0 +1,17 @@
+ in CSS, Inheritance controls what happens when an elememnts Value has has not been specified
+ then the element gets/ INHERITS the value of th property of the  the parent class
+ SPECIFICITY, refers to the existence of more  conflicting rules applying to the same element, when the browser decides based
+ on some rules which will be  applied
+ THE * has low soecificity
+ the ID has extremly high specificity
+
+ every element has its place in the specificity hierarchy
+ CONFLICTING RULES
+the CASCADE and the concept of  SPECIFICITY dictate which rules apply
+the CASCADE means that order of the CSS rules matter: when 2 rules apply that have the same specificity, the one that comes last in the CSS applies
+Specificity rules:
+1. inline styles- are attached directly to the element
+                    always overwrite any style that has been applied in an external CSS sheet
+2 type selectors
+3.class selectors
+4. id selectors have a higher hierarchy that attribute selectors
