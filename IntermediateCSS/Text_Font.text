@@ -1,0 +1,51 @@
+picking fonts for our webpages is very important
+
+SPECIFYING TYPEFACES:
+FONT-FAMILY: allows us to soecify the property that should be used for any thext inside the element for which the rule applies
+we can specify a list of sints separated by commas, in case the user doesn't have our first choice of font
+if the name is longer than one word it should be enclosed in double quotes
+
+FONT SIZE:
+enables us to specify a size for the font selected
+it can be :
+PIXELS: MOST USED AS THEY ALLOW DESIGNERS TO CONTROL BETTER HOW MUCH SPACE THE FONT TAKES UP
+PERCENNTAGE- the default size of text in browsers is 16 px
+              75% would therefor mean 12 pixels'and 200% 32 pixels
+EM:- THE SIZE OF EM IS DYNAMIC
+    THE EM IS EGUAL TO DOUBLE THE SIZE OF THE FONT THAT APPLIES TO THE PARENT ELEMENT
+    IF THE FONT SIZE HAS NOT BEEN SET ANYWHERE, THEN THE DEFAULT BROWSER FONT SIZE OF 16PX WILL BE USED
+using pixels is the best way to ensure you get the type you want, because points or ems can vary if the user changes
+the default size of their browser
+we can use PT for points when creating printer friendly versions of pages
+
+@FONT-FACE: allows you to use a  font even if it's not installed on the computer of the person browsing
+            alows us to specify a path to a copy of the font which will be downloaded on the pc of the person browsing
+            SYNTAX:
+                @font-face{
+                font-family: the name of the font
+                src: url(the path/url to the font)
+                }
+
+https://www.fontsquirrel.com/
+https://fontlibrary.org/
+https://fonts.adobe.com/
+
+FONT WEIGHT allows us to create bold text
+            has 2 values: BOLD which causes the text to appear bold
+                          NORMAL
+FONT_STYLE: to create italic  text
+            has 3 values: ITALIC
+                          OBLIQUE
+                          NORMAL
+TEXT-TRANSFORM: change the case of the text
+                has 3 values: UPPERCASE
+                              CAPITALIZE
+                              LOWERCASE
+TEXT-DECORATION: UNDERLINE-adds a line underneath the text
+                 OVERLINE- adds a line above the text
+                 LINE-THROUGH- adds a line through the text
+                 BLINK- makes the text flash on and off
+LINE-HEIGHT:spacing between the DESCENDER AND ASCENDER in LEADING
+             it should be a bit bigger than the space between the words as it helps the eye move along the line instead of down them
+             a good starter setting is 1.4 or 1.5 em
+
