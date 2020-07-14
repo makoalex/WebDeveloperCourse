@@ -1,0 +1,24 @@
+h1{
+font-family: 'Do Hyeon', sans-serif;
+font-size:2.3em;
+text-align:center;}
+table{
+margin:auto;
+border-collapse:collapse}
+td{
+    width: 100px;
+	height: 100px;
+
+
+}
+.vertical{
+    border-right:1px solid black;
+    border-left:1px solid black;
+    border-bottom:1px solid black
+}
+.horizontal{
+    border-bottom:1px solid black
+}
+
+#no{
+border-bottom:none;}
