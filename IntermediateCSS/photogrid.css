@@ -6,4 +6,9 @@ img{
 
 h1{
     font-family: 'Oxygen', sans-serif;
+    margin-left: 1.6%;
+    text-transform:uppercase;
+    border-bottom:3px solid rgba(115, 136, 145, .3);
+    padding:20px;
+    width: 27%;
 }
