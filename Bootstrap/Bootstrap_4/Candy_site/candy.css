@@ -1,0 +1,27 @@
+body{
+background-color:#f5c8c1;
+}
+#brand{
+font-family: 'Ribeye', cursive;
+font-size:2rem;
+color:rgb(245, 66, 120);
+
+}
+#link{
+font-family: 'Freckle Face', cursive;
+font-size:22px;
+}
+.navbar-dark .navbar-nav .nav-link{
+color:white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+color:#db1273;
+}
+span{
+color:#db1273;
+}
+#heading h2{
+font-size:40px;
+font-family: 'Amatic SC', cursive;
+}
