@@ -2,18 +2,16 @@ body{
 background-color:#ebf5f7;
 }
 #brand{
-font-family: 'Ribeye', cursive;
+font-family: 'Fredericka the Great', cursive;
 font-size:2rem;
 color:#29a1a6;
-text-shadow: 0px 4px 4px rgba(0,0,0,0.4),
-             0px 8px 12px rgba(0,0,0,0.2),
-             0px 18px 22px rgba(0,0,0,0.2);
+
 .navabar-brand:hover{
-color:}
+color:white}
 }
 #link{
-font-family: 'Freckle Face', cursive;
-font-size:22px;
+font-family: 'Roboto Condensed', sans-serif;
+font-size:20px;
 }
 .navbar-dark .navbar-nav .nav-link{
 color:white;
@@ -25,13 +23,46 @@ color:#29a1a6;
 span{
 color:#29a1a6;
 }
-#heading  h2{
+#heading  h1{
+padding-bottom:40px;
 font-size:40px;
 font-weight:100;
 text-shadow: 0px 4px 4px rgba(0,0,0,0.4),
              0px 8px 12px rgba(0,0,0,0.2),
              0px 18px 22px rgba(0,0,0,0.2);
 }
-#head h2 {
-font-size:40px;
+.lead {
+    font-seize:.1.125 rem;
+    line-height:1.5;
+}
+ h2{
+    font-weight:100;
+    font-size:3 rem;}
+.space{
+    margin-bottom: 100px;
+}
+.btn{
+    margin-bottom:30px;
+    margin-top:20px;
+}
+.btn-info{
+    background-color:#5ddee3;
+    border-color:#5ddee3;
+}
+@media screen and (max-width:750px)
+{#media{
+    margin-top:70px;
+    }
+}
+h4{
+font-size:17px;
 font-weight:100;}
+
+
+.pad{
+padding-right: 70px;
+}
+.navbar.scrolled{
+    background: rgba(93, 222, 227, 0.7);
+    transition:background 500ms;
+}
