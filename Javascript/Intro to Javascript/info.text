@@ -2,8 +2,9 @@ Javascript has 5 primitive data types
 NUMBERS
 STRINGS
 BOOLEAN
-NULL AND DEIFNED
-Javascript is dynamically tyoed, which means that strings can become numbers and the other way around
+NULL AND UNDEFINED
+null means explicitly nothing while UNDEFINED means something is empty ir doesn't have a value yet
+Javascript is dynamically typed, which means that strings can become numbers and the other way around
 
 Besides variable declaration, we have LET and CONST
 
@@ -27,3 +28,10 @@ CONST- variables declared with const maintain constant values
 
 we can declare VAR and LET without assigning a value, but not with CONST, because it's a constant and it's not supposed to change
 meaning we need to know ahead of time what that content  will be
+
+
+JAVASCRIPT BUILT IN METHODS
+ALERT- displays a window with  a special alert message
+PROMPT- diplays a dialog box that prompts the user for input
+CONSOLE.LOG- version of print in other languages
+             writes a message to the console, useful for testing purposes
