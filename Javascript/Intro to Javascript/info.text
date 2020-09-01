@@ -3,3 +3,27 @@ NUMBERS
 STRINGS
 BOOLEAN
 NULL AND DEIFNED
+Javascript is dynamically tyoed, which means that strings can become numbers and the other way around
+
+Besides variable declaration, we have LET and CONST
+
+VAR:- are globally scoped
+       variables declared with var outside of a functions can be used within the whole window
+       it is only function bound when sed within a function
+       can be updated and re-declared
+       it is added to the window object
+
+LET :- is blocked scoped
+        a block is a chunk of code bound by {} so a variable declared with LET that block is only available for use within that block
+        it can be updated but it can not be re-declared
+        it can be updated within the scope
+        it isn't added to the window object
+CONST- variables declared with const maintain constant values
+        block scoped and can only be accessed within the scope where it is declared
+        cannot be updated or re-declared
+                the value remains the same within the scope
+                every CONST declaration must therefore must be initialized at the time of declaration
+                different with OBJECTS declared with CONST- the object itself cannot be updated but the contents of the object CAN
+
+we can declare VAR and LET without assigning a value, but not with CONST, because it's a constant and it's not supposed to change
+meaning we need to know ahead of time what that content  will be
