@@ -47,3 +47,11 @@ there are 3  in Javascript -|| OR:- evaluates from left to right
                                         evaluates from left to right , if the result is false, it will return it
                                   and the last one 
                                 !(NOT)- accepts a single value and returns the opposite 
+EVERY VALUE IN JAVASCRIPT IS INHERENTLY TRUTHY OR FALSY 
+                        VALUES LIKE: 0
+                                     NULL
+                                     NaN                  ARE ALL FALSY
+                                     ""
+                                     false
+                                     UNDEFINED
+                        ALL THE OTHERS ARE
