@@ -32,6 +32,18 @@ meaning we need to know ahead of time what that content  will be
 
 JAVASCRIPT BUILT IN METHODS
 ALERT- displays a window with  a special alert message
-PROMPT- diplays a dialog box that prompts the user for input
+PROMPT- displays a dialog box that prompts the user for input
 CONSOLE.LOG- version of print in other languages
              writes a message to the console, useful for testing purposes
+
+
+LOGICAL OPERATORS
+
+there are 3  in Javascript -|| OR:- evaluates from left to right 
+                                  - for each operand it evaluates to boolean: if it's true, it stops there and return the value
+                                  - if all have been evaluated,means that one was false and it will return the value of false
+                                  - it processes the operands until a truthy value is reached, and returns it, otherwise it will return false
+                                && AND:-returns true if all operands are true, otherwise it will return false
+                                        evaluates from left to right , if the result is false, it will return it
+                                  and the last one 
+                                !(NOT)- accepts a single value and returns the opposite 
