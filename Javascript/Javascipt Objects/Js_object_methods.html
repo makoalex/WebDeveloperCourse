@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Js methods</title>
+</head>
+<body>
+  <h1>JS object methods</h1>
+  <div>
+    <p>
+     We can add functions as properties to an object and they would be called  methods 
+     A method is a  function that is a property inside of an object  
+    </p>
+    <div>
+      <p> Why add methods to an object</p>
+      <ul>
+        <li> keeps code organized so we can group things logically together</li>
+        <li>Avoid namespace collision
+          <ol> 
+            <li>we can have similar namespaces by placing them as methods to an object </li>
+          </ol>
+           </li>
+      </ul>
+    </div>
+    <p>
+      The <em>keyword <b>THIS</b></em> refers to the object it belongs to 
+      It can have different values depending on where it is used
+      <ol>
+        <li>In a method it refers to the <em><b>parent object</b></em></li>
+        <li>in a function it refers to the <em><b>global object</b></em></li>
+        <li>alone, it refers to the <em><b>global object</b></em></li>
+        <li>in an event, <em><b>this</b></em> refers to the <em><b>element</b></em> that received the event</li> 
+        <li>in a function in strict mode <em><b>this</b></em> is <em><b>undefined</b></em></li>
+      </ol>
+    </p>
+  </div>
+  <script type="text/javascript" src="Js_object_methods.js"></script>
+</body>
+</html>
