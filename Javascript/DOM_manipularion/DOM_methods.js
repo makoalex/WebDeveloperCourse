@@ -22,3 +22,13 @@ var tag = document.getElementsByTagName('li');
 var select = document.querySelector('#highlight');
 var select1 = document.querySelector('.something');// returns the first element with class 'something'
 var select2 = document.querySelectorAll('.something');//returns all the classes 'something'
+
+//paragraph exercise to find 4 way to select the first 'p' tag
+
+var first = document.getElementsByTagName('p')[0];
+third.style.background = 'pink';
+var second = document.getElementsByClassName('try')[0];
+var third = document.querySelector('#exer');
+var forth = document.getElementById('exer');
+var fifth = document.querySelector('p');
+var sixth = document.querySelector('h1+p');
