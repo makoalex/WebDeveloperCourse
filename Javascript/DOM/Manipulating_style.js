@@ -28,3 +28,19 @@ var changing = document.querySelector('h4').textContent = 'this is another way t
 
 // TEXT CONTENT  treats whatever we give him as plain text
 //INNER HTML  will render everything as html if we give it tags to render
+
+
+
+//ATTRIBUTES MANIPULATION
+     // on href and src
+
+var attr = document.querySelector('img');
+attr.getAttribute('src') // selecting the link
+attr.setAttribute('src', 'https://i.pinimg.com/originals/dc/f1/9f/dcf19fdbd0b8de49146f665f49e95c80.png'); // setting a new attribute t chang the image
+
+// can use that on an href as well
+var link = document.querySelector('a');
+link.getAttribute('href')// displays the href
+link.setAttribute("href", "https://www.youtube.com"); // this will change the link
+attr.textContent = "Link to the corgi site"; // this will change the text from link to google to link to corgi site
+
