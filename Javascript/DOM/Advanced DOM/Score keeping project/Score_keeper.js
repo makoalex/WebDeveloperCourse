@@ -57,15 +57,21 @@ function reset() {
 function input(){
   choseNumber = document.querySelector('p span');
   inputNumber.addEventListener('input', addValue);
-  console.log(inputNumber);
   function addValue(e){
     choseNumber.textContent = e.target.value;
-    number_plays = Number(inputNumber.value ); 
+    number_plays = Number(this.value ); 
   }
 }
 
+function reset_game (){
+  inputNumber.addEventListener('click', function(){
+    reset();
+  })
+}
 
-player_one()
-player_two()
-reset()
-input()
+
+  player_one()
+  player_two()
+  reset()
+  input()
+  reset_game()
