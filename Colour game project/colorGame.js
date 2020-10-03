@@ -1,11 +1,4 @@
-var colours = [
-  " rgb(252, 3, 186)",
-  "rgb(171, 2, 127)",
-  "rgb(140, 1, 104)",
-  "rgb(120, 2, 89)",
-  "rgb(92, 0, 68)",
-  "rgb(74, 1, 55)"
-];
+var colours = generateColoursArray(6);
 var square = document.querySelectorAll('.square');
 var title_color = document.querySelector('span');
 var picked_colour = random_colour_pick();
@@ -18,6 +11,27 @@ for (var i = 0; i < square.length; i++) {
   square[i].style.backgroundColor = colours[i];
 }
 
+function generateColoursArray(num){
+  //create and array
+  var arr = []
+  //repeat num times
+  for (var i = 0; i < num; i++){
+    //get random colour and push into arr
+    arr.push(randomColour())
+  }
+  //return array
+  return arr;
+}
+
+function randomColour(){
+  //pick a red from 0-255
+  var red = Math.floor(Math.random()* 256);
+  //pick a green from 0-255
+  var  green = Math.floor(Math.random() * 256);
+  //pick a blue from 0-255
+  var blue = Math.floor(Math.random() * 256);
+  return 'rgb('+ red+', ' +green+', '+ blue+')'
+}
 
 
 function pickColour() {
@@ -42,9 +56,9 @@ function rightAnswerColour(colour) {
   h1.style.backgroundColor = colour;
 }
 
-function random_colour_pick(){
+function random_colour_pick() {
   //picking a random number is done with MATH.random()
- var randomColour=  Math.floor(Math.random()*colours.length);
- return colours[randomColour];
+  var randomColour = Math.floor(Math.random() * colours.length);
+  return colours[randomColour];
 }
 pickColour()
