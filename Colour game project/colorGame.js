@@ -1,7 +1,7 @@
 var num = 6
 var colours = generateColoursArray(num);
 var square = document.querySelectorAll('.square');
-var title_color = document.querySelector('span');
+var title_color = document.querySelector('#title');
 var picked_colour = random_colour_pick();
 title_color.textContent = picked_colour;
 var messageDisplay = document.querySelector('#message');
@@ -58,7 +58,8 @@ function New_colours() {
     title_color.textContent = picked_colour;
     //change colours of the squares
     pick_squareColour();
-    h1.style.backgroundColor = body.style.backgroundColor;
+    messageDisplay.textContent = ''
+    h1.style.backgroundColor = 'steelblue';
     resetButton.textContent = 'New Colours';
   })
 }
@@ -95,7 +96,8 @@ function pickColour() {
         messageDisplay.textContent = 'Correct!';
         rightAnswerColour(picked_colour)
       } else {
-        this.style.backgroundColor = '#232323';
+        this.style.backgroundColor = body.style.backgroundColor;
+        border = 'none'
         messageDisplay.textContent = 'Try again';
       }
     });
