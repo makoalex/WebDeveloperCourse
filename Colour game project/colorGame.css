@@ -1,5 +1,7 @@
 body{
-  background: #232323;
+  background:rgb(37, 36, 36);
+  margin: 0;
+  font-family: 'Grandstander', cursive;
 }
 .square{
   width: 30%;
@@ -9,23 +11,66 @@ body{
 }
 #container{
   max-width: 450px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 h1{
   color: white;
-  max-width: 32%;
-  padding: 30px;
-  margin-left: 20px; 
-  margin-bottom:50px;
+  text-align: center;
+  background-color: steelblue;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom:20px;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
  
 #stripe{
-  background-color: grey;
+  background-color: whitesmoke;
   text-align: center;
-  height:30px;
+  height: 19px;
+
+  
 }
 .selected {
-  background: lightseagreen;
+  background: steelblue;
+  }
+#title{
+  font-size: 1.7em;
+}
+button {
+ border: none;
+ background-color:none;
+ text-align: center;
+ font-weight:800;
+ height: 100%;
+ letter-spacing: 1px;
+ font-size: medium;
+ opacity: 0.7;
+ transition: all 0.3s;
+ text-transform: uppercase;
+ font-family: 'Grandstander', cursive;
+ outline:none;
+ -webkit-transition: all 0.3s;
+ -moz-transition: all 0.3s;
+}
+button:hover{
+  background-color: steelblue;
+  color:white;
+}
+.square{
+  border-radius: 15%;
+
+  transition: background 0.8s ease-out;
+  -webkit-transition: 0.8s ease-out;
+  -moz-transition: 0.8s ease-out;
+}
+
+#message{
+  display: inline-block;
+  width: 13%;
+  text-transform: uppercase;
+ font-family: 'Grandstander', cursive;
+ font-weight: 600;
 }
