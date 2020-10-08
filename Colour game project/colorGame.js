@@ -10,6 +10,7 @@ resetButton = document.getElementById('reset');
 var body = document.querySelector('body');
 var easy = document.getElementById('easy');
 var hard = document.getElementById('hard');
+var mode_button = document.getElementsByClassName('mode')
 
 function pick_squareColour() {
   for (var i = 0; i < square.length; i++) {
@@ -17,50 +18,45 @@ function pick_squareColour() {
   };
 }
 
-function easyLevel() {
-  easy.addEventListener('click', function () {
-    easy.classList.add('selected');
-    hard.classList.remove('selected');
-    num = 3;
-    colours = generateColoursArray(num);
-    picked_colour = random_colour_pick()
-    title_color.textContent = picked_colour;
+function level_selection() {
+  for (var i = 0; i < mode_button.length; i++) {
+    mode_button[i].addEventListener('click', function () {
+      mode_button[0].classList.remove('selected');
+      mode_button[1].classList.remove('selected');
+      this.classList.add('selected');
+      this.textContent === 'Easy' ? num = 3 : num = 6;
+      reset_colours();
+    })
+  }
+}
+
+function reset_colours() {
+  colours = generateColoursArray(num);
+  //pick a new random colour from the array
+  picked_colour = random_colour_pick();
+  // change the colour display to match the picked square
+  title_color.textContent = picked_colour;
+  change_square_colour();
+  
+  function change_square_colour(){
     for (var i = 0; i < square.length; i++) {
       if (colours[i]) {
+        square[i].style.display = 'block'
         square[i].style.backgroundColor = colours[i];
       } else {
         square[i].style.display = 'none';
       }
     }
-  });
-}
-
-function hardLevel() {
-  hard.addEventListener('click', function () {
-    hard.classList.add('selected');
-    easy.classList.remove('selected');
-    num = 6
-    colours = generateColoursArray(num)
-    for (var i = 0; i < square.length; i++) {
-      square[i].style.display = 'block';
-    }
-  });
-}
+    messageDisplay.textContent = ''
+    h1.style.backgroundColor = 'steelblue';
+    resetButton.textContent = 'New Colours'
+  }
+  }
 
 
 function New_colours() {
   resetButton.addEventListener('click', function () {
-    //generate all new colour
-    colours = generateColoursArray(num);
-    //pick a new random colour from the array
-    picked_colour = random_colour_pick();
-    // change the colour display to match the picked square
-    title_color.textContent = picked_colour;
-    //change colours of the squares
-    pick_squareColour();
-    messageDisplay.textContent = ''
-    h1.style.backgroundColor = 'steelblue';
-    resetButton.textContent = 'New Colours';
+    reset_colours();
   })
 }
 
@@ -97,6 +93,7 @@ function pickColour() {
         rightAnswerColour(picked_colour)
       } else {
         this.style.backgroundColor = body.style.backgroundColor;
+        this.classList.remove("shadowed");
         border = 'none'
         messageDisplay.textContent = 'Try again';
       }
@@ -112,6 +109,7 @@ function rightAnswerColour(colour) {
   resetButton.textContent = 'Play Again';
 }
 
+
 function random_colour_pick() {
   //picking a random number is done with MATH.random()
   var randomColour = Math.floor(Math.random() * colours.length);
@@ -121,5 +119,4 @@ function random_colour_pick() {
 pick_squareColour()
 pickColour()
 New_colours()
-easyLevel()
-hardLevel()
+level_selection()
