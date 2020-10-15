@@ -1,31 +1,59 @@
 /*the star*/
-*{
-    border:1px solid red;
+* {
+    border: 1px solid red;
 }
 
 /*descendant selector*/
-li a{
-    color:green;
+li a {
+    color: green;
 }
- /*adjacent selectors*/
+
+/*adjacent selectors*/
 h3+ul li {
     background-color: pink;
 }
 
 /*attribute selectors*/
 
-a[href="https://developers.google.com/web/showcase/2015/adventuremachine"]{
+a[href="https://developers.google.com/web/showcase/2015/adventuremachine"] {
     background-color: yellow;
 }
+
 /*visited/ not visited*/
 
-a:link{
-    colour:green
+a:link {
+    colour: green
 }
-a:visited{
-    color:blue;
+
+a:visited {
+    color: blue;
 }
+
 /* select and style the first letter of an element*/
-li:first-letter{
-    color:green
+li:first-letter {
+    color: green
 }
+
+/* :hover activates when the user hovers over */
+button:hover {
+    background: #9a031e;
+    color: white;
+}
+h1+a:active {
+    color:black;
+
+}
+/* PSEUDO ELEMENTS:- style particular parts of a selected element
+use two semi colons*/
+ /* :: first-letter*/
+ h1::first-letter{
+     font-weight: 700;
+     font-size: 40px;
+     color:red;
+ }
+ p::first-line{
+     color: red;
+ }
+ ::selection{
+     background:#fb8500;
+ }
