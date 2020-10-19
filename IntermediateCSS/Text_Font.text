@@ -1,25 +1,25 @@
 picking fonts for our webpages is very important
 
 SPECIFYING TYPEFACES:
-FONT-FAMILY: allows us to soecify the property that should be used for any thext inside the element for which the rule applies
-we can specify a list of sints separated by commas, in case the user doesn't have our first choice of font
+FONT-FAMILY: allows us to specify the property that should be used for any text inside the element for which the rule applies
+we can specify a list of fonts separated by commas, in case the user doesn't have our first choice of font
 if the name is longer than one word it should be enclosed in double quotes
 
 FONT SIZE:
 enables us to specify a size for the font selected
 it can be :
 PIXELS: MOST USED AS THEY ALLOW DESIGNERS TO CONTROL BETTER HOW MUCH SPACE THE FONT TAKES UP
-PERCENNTAGE- the default size of text in browsers is 16 px
+PERCENTAGE- the default size of text in browsers is 16 px
               75% would therefor mean 12 pixels'and 200% 32 pixels
 EM:- THE SIZE OF EM IS DYNAMIC
-    THE EM IS EGUAL TO DOUBLE THE SIZE OF THE FONT THAT APPLIES TO THE PARENT ELEMENT
+    THE EM IS EQUAL TO DOUBLE THE SIZE OF THE FONT THAT APPLIES TO THE PARENT ELEMENT
     IF THE FONT SIZE HAS NOT BEEN SET ANYWHERE, THEN THE DEFAULT BROWSER FONT SIZE OF 16PX WILL BE USED
 using pixels is the best way to ensure you get the type you want, because points or ems can vary if the user changes
 the default size of their browser
 we can use PT for points when creating printer friendly versions of pages
 
 @FONT-FACE: allows you to use a  font even if it's not installed on the computer of the person browsing
-            alows us to specify a path to a copy of the font which will be downloaded on the pc of the person browsing
+            allows us to specify a path to a copy of the font which will be downloaded on the pc of the person browsing
             SYNTAX:
                 @font-face{
                 font-family: the name of the font

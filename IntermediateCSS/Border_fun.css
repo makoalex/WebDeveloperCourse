@@ -1,0 +1,32 @@
+h1{
+  width:30%;
+  background: #dda15e;
+  padding: 40px 0 40px 15px;
+  margin-right: 150px;
+}
+body{
+  margin: 0;
+}
+section{
+  width: 150px;
+  height: 250px;
+}
+ 
+#one{
+  background:#deab90;
+  border-width: 3px;
+  border-color: #774936;
+  border-style: solid;
+}
+#two{
+  background: #edc4b3;
+  border-width: thick;
+  border-color: #660708;
+  border-style: ridge;
+}
+ #three{
+   background: #d69f7e;
+   border-width: 2em 1.5em 0.5 em;
+   border-color: black;
+   border-style: solid;
+ }
