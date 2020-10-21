@@ -1,0 +1,39 @@
+div{
+  background: maroon;
+  width:50px;
+  margin: 10px;
+  height: 40px;
+  display: inline-block;
+}
+#middle{
+  background-color:lawngreen ;
+}
+
+#sticky #middle{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+}
+
+#static #middle{
+  position: static;
+}
+
+#relative #middle{
+  position: relative;
+  top: 30px;
+  right: 50px;
+}
+#absolute{
+  position: relative;
+}
+#absolute #middle{
+  position: absolute;
+  top: 10px;
+}
+#fixed #middle{
+  position: fixed;
+  top: 0;
+  left: 200px;
+}
+
