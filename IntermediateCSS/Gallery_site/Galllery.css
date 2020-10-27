@@ -1,0 +1,26 @@
+img{
+  width: 30%; 
+  margin: 1.5%;
+  margin-top: 100px;
+  transition: translateY 4s;
+}
+#height{
+  height: 820px;
+}
+.margin{
+  margin-top: 20px;
+}
+h1{
+  font-family: 'Syne Mono', monospace;
+  font-size: 40px ;
+  border-bottom: 3px solid #f1f1f1;
+  width: 27%;
+  padding: 0.5em;
+  margin-left: 1.5%;
+}
+img:hover{
+  transform:scale(1.2);
+}
+body{
+  background: #FAF9F8 ;
+}
