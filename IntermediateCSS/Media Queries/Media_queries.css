@@ -1,0 +1,40 @@
+body{
+  font-family: 'Roboto Mono', monospace;
+}
+h1{
+  text-align: center;
+  font-size: 3em;
+  color: #056A5B;
+}
+ul ,li{
+  display: inline;
+}
+nav{
+  font-size: 1em;
+}
+
+@media (min-width:500px){
+  h1{
+    color: #0BF3D0;
+  }
+ body{
+    background:#011F1A;
+ }
+}
+@media (min-width: 1000px){
+  h1{
+    color: #09BDA2;
+  }
+  body{
+    background: white;
+  }
+}
+@media (min-width: 1300px){
+  h1{
+    color:#77F9E5;
+  }
+  h1:hover{
+    background-color: magenta;
+  }
+}
+
