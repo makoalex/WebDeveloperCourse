@@ -1,57 +1,52 @@
-const player1ScoreDisplay = document.querySelector('#p1scoreDisplay');
 const option = document.getElementsByTagName('option')
-const player2ScoreDisplay = document.querySelector('#p2scoreDisplay');
-let numberPlays = document.querySelector('#numberPlayers');
-const player1Button = document.querySelector('#p1Button');
-const player2Button = document.querySelector('#p2Button');
 const resetButton = document.querySelector('#reset');
-let player1Score = 0;
-let player2Score = 0;
 let chosenNumber = 0;
 let gameRunning = true;
 
+
+let numberPlays = document.querySelector('#numberPlayers');
 numberPlays.addEventListener('change', function () {
-  chosenNumber = Number(this.value);
+  chosenNumber = parseInt(this.value);
 })
 
-function addColour() {
+const p1 = {
+  button: document.querySelector('#p1Button'),
+  score: 0,
+  display:document.querySelector('#p1scoreDisplay')
 
+};
+const p2 ={
+  button: document.querySelector('#p2Button'),
+  score: 0,
+  display: document.querySelector('#p2scoreDisplay')
+};
+
+
+function scoreUpdate(player, opponent){
+  if (gameRunning) {
+    player.score++;
+    if (player.score === chosenNumber) {
+      gameRunning = false
+      player.display.classList.add('text-success')
+      opponent.display.classList.add('text-danger')
+      player.button.disabled= true;
+      opponent.button.disabled= true;
+    }
+  }
+  player.display.textContent = player.score;
 }
 
-function removeColour() {
-  player1ScoreDisplay.classList.remove('winner')
-  player2ScoreDisplay.classList.remove('winner')
-  player1ScoreDisplay.classList.remove('loser')
-  player2ScoreDisplay.classList.remove('loser')
-}
+
 
 function score1() {
-  player1Button.addEventListener('click', function () {
-    if (gameRunning) {
-      player1Score++;
-      if (player1Score === chosenNumber) {
-        gameRunning = false
-        player1ScoreDisplay.classList.add('winner')
-        player2ScoreDisplay.classList.add('loser')
-        alert('player 1 wins')
-      }
-    }
-    player1ScoreDisplay.textContent = player1Score;
+  p1.button.addEventListener('click', function (){
+    scoreUpdate(p1, p2)
   })
 }
 
 function score2() {
-  player2Button.addEventListener('click', function () {
-    if (gameRunning) {
-      player2Score++;
-      if (player2Score === chosenNumber) {
-        gameRunning = false
-        player2ScoreDisplay.classList.add('winner')
-        player1ScoreDisplay.classList.add('loser')
-        alert('player 2 wins');
-      }
-    }
-    player2ScoreDisplay.textContent = player2Score;
+  p2.button.addEventListener('click', function () {
+   scoreUpdate(p2, p1)
   })
 }
 
@@ -65,13 +60,24 @@ function resetGame() {
   resetButton.addEventListener('click', reset)
 }
 function reset (){
-  player2Score=0;
-  player1Score=0;
-  player1ScoreDisplay.textContent= player1Score; 
-  player2ScoreDisplay.textContent= player2Score;
-  removeColour()
-  selected()
+
+  for (p of [p1,p2]){
+    p.score =0;
+    p.display.textContent= p.score;
+    p.display.classList.remove('text-success', 'text-danger')
+    p.button.disabled= false;
+    selected()
   gameRunning= true
+  }
+  // p1.score=0;
+  // p2.score=0;
+   
+  // p2.display.textContent= p2.score;
+ 
+  // p2.display.classList.remove('text-success','text-danger')
+ 
+  // p1.button.disabled = false
+  
 }
   score1()
   score2()
