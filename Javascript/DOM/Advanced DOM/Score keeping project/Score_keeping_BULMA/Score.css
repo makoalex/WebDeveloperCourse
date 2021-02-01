@@ -1,9 +1,14 @@
-#image{
-  width: 30%;
+.card{
+  width:30%;
 }
-.winner{
-  color: green;
+
+
+#numberPlayers{
+  width: 60%;
 }
-.loser{
-  color: red;
+.card-title, .card-header{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#button{
+  margin: 0%;
 }
