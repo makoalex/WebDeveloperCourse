@@ -6,7 +6,7 @@
 
 const makeRequestPromise = (url) =>{
   return new Promise((resolved, rejected) =>{
-    const delay = Math.floor(Math.random()*(4500));
+    const delay = Math.floor(Math.random()*5000);
     setTimeout(() => {
       if (delay > 4000){
         rejected('Connection timeout')
@@ -18,26 +18,47 @@ const makeRequestPromise = (url) =>{
   })
 }
 
-makeRequestPromise('yelp.com/page1')
-  .then((resolved) => {
-    console.log('It worked (p1)')
-    console.log(resolved)
-    makeRequestPromise('yelp.com/page2')
-    .then(() => {
-      console.log('It worked(p2)')
-      makeRequestPromise('yelp.com/page3')
-      .then(() => {
-        console.log('it worked(p3)')
-      })
-      .catch(() =>{
-        console.log('error (p3)')
-      })
-    })
-    .catch(() =>{
-      console.log('error(p2)')
-    })
-  })
+// makeRequestPromise('yelp.com/page1')
+//   .then((resolved) => {
+//     console.log('It worked (p1)')
+//     console.log(resolved)
+//     makeRequestPromise('yelp.com/page2')
+//     .then(() => {
+//       console.log('It worked(p2)')
+//       makeRequestPromise('yelp.com/page3')
+//       .then(() => {
+//         console.log('it worked(p3)')
+//       })
+//       .catch(() =>{
+//         console.log('error (p3)')
+//       })
+//     })
+//     .catch(() =>{
+//       console.log('error(p2)')
+//     })
+//   })
 
-  .catch(() =>{
-    console.log('Error')
-  })
+//   .catch(() =>{
+//     console.log('Error')
+//   })
+
+  // The simplified version of PROMISES that looses a lot of the nesting
+  makeRequestPromise('yelp.com/page1')
+    .then((data) => {
+      console.log('It worked for page 1')
+      console.log(data)
+      return makeRequestPromise('yelp.com/page2')
+    })
+    .then((data) =>{
+      console.log('It worked for page 2')
+      console.log(data)
+      return makeRequestPromise('yelp.com/page3')
+    })
+    .then((data) => {
+      console.log('It worked for page 3 ')
+      console.log (data)
+    })
+    .catch((err) =>{
+      console.log(' Oh no, something went wrong ')
+      console.log(err)
+    })
