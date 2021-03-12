@@ -1,2 +1,4 @@
 const joke =require('awesome-dev-jokes');
-console.log(joke.getRandomJoke())
+const colour = require('colors');
+console.log(joke)
+console.log(joke.getRandomJoke().rainbow)
