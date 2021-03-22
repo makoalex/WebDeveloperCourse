@@ -13,6 +13,13 @@ app.get('/', (req, res) =>{
   res.render('home')
 })
 
+// adding EJS to  file RandomNum.ejs
+// we can create an object to render {rand:num} or we can just use the {num:num}
+app.get('/random', (req, res) =>{
+  const num = Math.floor(Math.random() *10)+1;
+  res.render('randomNum', {num})
+})
+
 app.listen(port, () =>{
   console.log('LISTENING ON PORT 3000!!!')
 })
