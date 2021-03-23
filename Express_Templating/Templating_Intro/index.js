@@ -20,6 +20,13 @@ app.get('/random', (req, res) =>{
   res.render('randomNum', {num})
 })
 
+// making a subredit template demo 
+
+app.get('/r/:subreddit', (req, res) =>{
+  const {subreddit} = req.params;
+  res.render('subreddit',{subreddit})
+})
+
 app.listen(port, () =>{
   console.log('LISTENING ON PORT 3000!!!')
 })
