@@ -20,6 +20,14 @@ app.get('/random', (req, res) =>{
   res.render('randomNum', {num})
 })
 
+// looping with ejs
+app.get('/user', (req, res) =>{
+  const users= [
+    'mackochan', 'olovholm', 'pepe1st'
+  ];
+  res.render('userName', {users})
+})
+
 // making a subredit template demo 
 
 app.get('/r/:subreddit', (req, res) =>{
