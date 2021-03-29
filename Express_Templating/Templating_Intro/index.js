@@ -1,6 +1,8 @@
 const express = require('express');
 const { dirname } = require('path');
 const app = express();
+const jData = require('./data.json');
+console.log(jData)
 const port = 3000;
 
 app.set('view engine', 'ejs')
@@ -32,8 +34,17 @@ app.get('/user', (req, res) =>{
 
 app.get('/r/:subreddit', (req, res) =>{
   const {subreddit} = req.params;
-  res.render('subreddit',{subreddit})
+  // adding more complex ejs work using the data.json file
+  // taking the subreddit data and plugging into the JsanData to extract the info
+  const data = jData[subreddit];
+  if(data){
+  res.render('subreddit',{...data})
+  }else{
+    res.render('failure', {subreddit})
+  }
+  
 })
+
 
 app.listen(port, () =>{
   console.log('LISTENING ON PORT 3000!!!')
