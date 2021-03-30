@@ -10,6 +10,12 @@ app.set('view engine', 'ejs')
 const path = require('path');
 app.set('views', path.join(__dirname, '/views'))
 
+// using static files from public folder using express.static()
+app.use(express.static(path.join(__dirname, 'public')))
+// making the absolute path for the public folder
+// connecting the public folder with the ejs file
+
+
 app.get('/', (req, res) =>{
   // res.send('hi')
   res.render('home')
