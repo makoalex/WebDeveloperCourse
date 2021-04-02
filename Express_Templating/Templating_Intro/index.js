@@ -18,14 +18,14 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) =>{
   // res.send('hi')
-  res.render('home')
+  res.render('home',{name : 'Home'})
 })
 
 // adding EJS to  file RandomNum.ejs
 // we can create an object to render {rand:num} or we can just use the {num:num}
 app.get('/random', (req, res) =>{
   const num = Math.floor(Math.random() *10)+1;
-  res.render('randomNum', {num})
+  res.render('randomNum', {num, name:'random'})
 })
 
 // looping with ejs
@@ -33,7 +33,7 @@ app.get('/user', (req, res) =>{
   const users= [
     'mackochan', 'olovholm', 'pepe1st'
   ];
-  res.render('userName', {users})
+  res.render('userName', {users, name :'Users'})
 })
 
 // making a subredit template demo 
@@ -46,7 +46,7 @@ app.get('/r/:subreddit', (req, res) =>{
   if(data){
   res.render('subreddit',{...data})
   }else{
-    res.render('failure', {subreddit})
+    res.render('failure', {subreddit, name : 'failure'})
   }
   
 })
