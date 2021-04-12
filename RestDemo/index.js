@@ -37,7 +37,7 @@ app.get('/comments/new', (req, res) =>{
 app.post('/comments', (req, res) => {
  const {user, comment}= req.body
  comments.push({user,comment})
-  res.send('It worked')
+  res.redirect('/comments');
 })
 
 app.get('/tacos', (req, res) =>{
