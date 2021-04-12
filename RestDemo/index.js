@@ -30,6 +30,16 @@ app.get('/comments', (req, res)=>{
   res.render('comments/index', {comments})
 })
 
+app.get('/comments/new', (req, res) =>{
+  res.render('comments/new');
+  
+})
+app.post('/comments', (req, res) => {
+ const {user, comment}= req.body
+ comments.push({user,comment})
+  res.send('It worked')
+})
+
 app.get('/tacos', (req, res) =>{
   res.send('GET SEND')
 })
