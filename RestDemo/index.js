@@ -4,17 +4,20 @@ const port = 3000;
 const path = require('path');
 
 const comments =[
-  {
+  { 
+    id: 1, 
     user:'mako',
     comment: 'This film was clearly underrated'
   },
 
    {
+     id : 2,
       user : 'badass',
     comment : 'i liked the CGI '
    },
 
     {
+      id : 3,
       user : 'fred400',
     comment : "seen it  times already. Can't wait for the sequel"
 }
@@ -34,6 +37,15 @@ app.get('/comments/new', (req, res) =>{
   res.render('comments/new');
   
 })
+
+app.get('/comments/:id', (req, res) => {
+  const {id} = req.params;
+  const comment =comments.find(c => c.id ===parseInt(id));
+  res.render('comments/show', {comment})
+
+})
+
+
 app.post('/comments', (req, res) => {
  const {user, comment}= req.body
  comments.push({user,comment})
