@@ -1,23 +1,24 @@
 const express = require('express');
 const app = express();
+const { v4: uuid } = require('uuid');
 const port = 3000;
 const path = require('path');
 
 const comments =[
   { 
-    id: 1, 
+    id: uuid(), 
     user:'mako',
     comment: 'This film was clearly underrated'
   },
 
    {
-     id : 2,
+     id : uuid(),
       user : 'badass',
     comment : 'i liked the CGI '
    },
 
     {
-      id : 3,
+      id : uuid(),
       user : 'fred400',
     comment : "seen it  times already. Can't wait for the sequel"
 }
@@ -40,7 +41,7 @@ app.get('/comments/new', (req, res) =>{
 
 app.get('/comments/:id', (req, res) => {
   const {id} = req.params;
-  const comment =comments.find(c => c.id ===parseInt(id));
+  const comment =comments.find(c => c.id ===id);
   res.render('comments/show', {comment})
 
 })
@@ -48,7 +49,7 @@ app.get('/comments/:id', (req, res) => {
 
 app.post('/comments', (req, res) => {
  const {user, comment}= req.body
- comments.push({user,comment})
+ comments.push({ user , comment , id: uuid()})
   res.redirect('/comments');
 })
 
