@@ -39,19 +39,31 @@ app.get('/comments/new', (req, res) =>{
   
 })
 
+
+app.post('/comments', (req, res) => {
+  const {user, comment}= req.body
+  comments.push({ user , comment , id: uuid()})
+   res.redirect('/comments');
+ })
+
 app.get('/comments/:id', (req, res) => {
   const {id} = req.params;
   const comment =comments.find(c => c.id ===id);
   res.render('comments/show', {comment})
 
 })
+app.patch('/comments/:id', (req, res) => {
+  const { id } = req.params;
+  const newComment = req.body.comment;
+  const findComment = comments.find(c => c.id = id);
+  findComment.comment = newComment;
+  res.redirect('/comments')
 
-
-app.post('/comments', (req, res) => {
- const {user, comment}= req.body
- comments.push({ user , comment , id: uuid()})
-  res.redirect('/comments');
 })
+
+
+
+
 
 app.get('/tacos', (req, res) =>{
   res.send('GET SEND')
