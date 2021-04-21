@@ -9,8 +9,17 @@
 <body>
   <h1>Comment ID: <%= comment.id %></h1>
   <h3><%= comment.comment %>- <b><%= comment.user %> </b> </h3>
-  <a href="/comments"> Back to index</a>
-  <a href="/comments/<%= comment.id %>/edit "> Edit comment</a>
-  
+  <form action="/comments">
+    <button>Back to index</button>
+  </form>
+  <br>
+  <!-- <a href="/comments"> Back to index</a> -->
+  <form action="/comments/<%= comment.id %>/edit ">
+  <button>Edit comment</button></form>
+  <!-- <a href="/comments/<%= comment.id %>/edit "> Edit comment</a> -->
+  <br>
+  <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE ">
+    <button>Delete</button>
+  </form>
 </body>
 </html>

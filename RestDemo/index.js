@@ -5,7 +5,7 @@ const methodOverride = require('method-override')
 const port = 3000;
 const path = require('path');
 
-const comments =[
+let comments =[
   { 
     id: uuid(), 
     user:'mako',
@@ -68,10 +68,16 @@ app.get('/comments/:id/edit', (req, res) =>{
 app.patch('/comments/:id', (req, res) => {
   const { id } = req.params;
   const newComment = req.body.comment;
-  const findComment = comments.find(c => c.id = id);
+  const findComment = comments.find(c => c.id === id);
   findComment.comment = newComment;
   res.redirect('/comments')
 
+})
+
+app.delete('/comments/:id', (req, res) => {
+  const { id } = req.params;
+  comments =  comments.filter(c => c.id !== id);
+  res.redirect('/comments' )
 })
 
 
